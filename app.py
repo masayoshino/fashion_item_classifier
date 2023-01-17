@@ -9,8 +9,8 @@ st.sidebar.write("")
 img_source = st.sidebar.radio("画像のソースを選択してください。", ("画像をアップロード", "カメラで撮影"))
 if img_source == "画像をアップロード":
   img_file = st.sidebar.fgile_uploader("画像を選択してください。", type=["png", "jpg", "jpeg"])
-  elif img_source == "カメラで撮影":
-  img_file = st.camera_input("カメラで撮影")
+ # elif img_source == "カメラで撮影":
+ # img_file = st.camera_input("カメラで撮影")
 if img_file is not None:
   with st.spinner("推定中..."):
     img = Image.open(img_file)
